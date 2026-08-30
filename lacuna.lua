@@ -11,7 +11,7 @@
 --- ongoing project is judged as a reply and not as a cold first message.
 ---
 --- Requires Hammerspoon and an OpenRouter API key. MIT licensed.
---- https://github.com/kudelin/lacuna
+--- https://github.com/Seryozh/lacuna
 
 local M = {}
 
@@ -636,7 +636,7 @@ function M.check(text, appName, winTitle)
   hs.http.asyncPost(M.config.endpoint, hs.json.encode(payload), {
     ["Authorization"] = "Bearer " .. key,
     ["Content-Type"] = "application/json",
-    ["HTTP-Referer"] = "https://github.com/kudelin/lacuna",
+    ["HTTP-Referer"] = "https://github.com/Seryozh/lacuna",
     ["X-Title"] = "Lacuna",
   }, function(status, response)
     if not run.pending then

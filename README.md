@@ -20,7 +20,7 @@ cent and the exact price shows up in the window.
 
 ```bash
 brew install --cask hammerspoon
-git clone https://github.com/kudelin/lacuna.git ~/.hammerspoon/lacuna
+git clone https://github.com/Seryozh/lacuna.git ~/.hammerspoon/lacuna
 mkdir -p ~/.config/lacuna && pbpaste > ~/.config/lacuna/key   # your OpenRouter key
 ```
 
