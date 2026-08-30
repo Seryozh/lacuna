@@ -1,8 +1,14 @@
 # lacuna
 
-**Select a draft prompt anywhere on macOS, press one key, and see what the model on the other
-end still can't know.** It scores the draft, rewrites it, and leaves `[a bracketed slot]`
-wherever a fact exists only in your head. Your own text is never touched.
+A lacuna is a gap in a piece of writing where something is missing. It's the blank you hit
+reading an old letter with a word torn out of it: the sentence keeps going, but one piece isn't
+there, so you either guess it or you notice you can't. Prompts are full of these. You know
+which product you meant, which number you were looking at, what a good answer would look like,
+and none of that is on the page, so the model quietly guesses and you argue with the result.
+
+**Select a draft prompt anywhere on macOS, press one key, and see the gaps before you send
+it.** It scores the draft, rewrites it, and leaves `[a bracketed slot]` wherever a fact exists
+only in your head. Your own text is never touched.
 
 Runs as a [Hammerspoon](https://www.hammerspoon.org/) module, so you need Hammerspoon and an
 [OpenRouter](https://openrouter.ai/) key of your own. Each press costs about eight tenths of a
