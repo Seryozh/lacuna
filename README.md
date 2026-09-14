@@ -45,9 +45,7 @@ A model can restructure your sentence all day. What it cannot do is know which m
 meant, which flow you were looking at, or what you'd count as a good answer, so it either
 interrupts you with questions or quietly invents something plausible.
 
-Slots are the third option. The rewrite comes back complete except for the two or three facts
-only you have, marked in orange, and you fill them in about ten seconds. Nothing gets made up
-on your behalf, and you can see exactly where the model would have been guessing.
+Slots are the third option. The rewrite comes back complete except for the two or three facts only you have, marked in orange, and you fill them in about ten seconds. The bracketed slots make missing information visible so you can fill it in before using the rewrite.
 
 ## It reads the session you're typing into
 
@@ -78,8 +76,9 @@ of your recent conversation goes to whichever model you configured, through Open
 request is shown verbatim under "What was sent" in the window, so you can check instead of
 trusting me, and `sessionContext: false` in the config turns that half off entirely.
 
-Nothing is stored anywhere except two files on your own disk: a log at
-`~/.hammerspoon/lacuna.log` and a history at `~/.config/lacuna/history.jsonl`.
+Lacuna keeps a local log and history. With the default configuration, requests go through OpenRouter to your selected provider.
+
+The log is at `~/.hammerspoon/lacuna.log` and the history is at `~/.config/lacuna/history.jsonl`.
 
 ## Why not one of the paid apps
 
@@ -88,11 +87,7 @@ PromptAI, Rephrase. If what you want is a better sentence with one keypress, buy
 because they're signed, they update themselves, they come with a managed key so there's no
 setup, and RewriteBar's word-level diff is better than anything here.
 
-They all share one default though, which is that they replace your text with their version. So
-you get a polished prompt and no idea what was weak about yours, and when a rewrite invents a
-file path or a metric you never mentioned, there's nothing marking it as invented. This does
-the opposite: it never touches your text, it tells you what's missing, and it leaves the
-unknowable blank on purpose.
+Lacuna shows a proposed rewrite alongside the missing information, while leaving the selected text in place. It is designed for reviewing what a prompt is missing before you send it.
 
 ## Config
 
